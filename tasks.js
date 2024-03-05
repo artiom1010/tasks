@@ -20,6 +20,13 @@
 //   console.log(twoSum()); 
 
 
-
 // 2.Palindrome Number
 
+let word = "as";
+let revword = "sa";
+
+if (word == revword) {
+    console.log("Yes");
+}
+
+console.log("No");
