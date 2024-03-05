@@ -22,11 +22,12 @@
 
 // 2.Palindrome Number
 
-let word = "as";
-let revword = "sa";
+// let number = String(121)
+// let str_number = number.split('').reverse().join('')
+// let rev_number = parseInt(str_number)
 
-if (word == revword) {
-    console.log("Yes");
-}
-
-console.log("No");
+// if (number == rev_number) {
+//     console.log(true)
+// } else {
+//     console.log(false)
+// }
