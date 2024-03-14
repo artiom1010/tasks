@@ -41,19 +41,26 @@
 
 // Solution 2
 
-const initialNumber = 1234321;
-const convertedNumber = String(initialNumber);
+function isPalindrome(initialNumber) {
+    const convertedNumber = String(initialNumber);
+    const length = convertedNumber.length;
+    
+    for (let i = 0; i < length / 2; i++) {
+        if (convertedNumber[i] !== convertedNumber[length - 1 - i]) {
+            return false;
+        }
+    };
 
-const length = convertedNumber.length;
+    return true;
+}
 
-for (let i = 0; i < length; i++) {
-    if (convertedNumber[i] == convertedNumber[length - 1 - i]) {
-        console.log(true)
-    } else {
-        console.log(false);
-        break;
-    }
-};
+console.log(isPalindrome(1234321));
+console.log(isPalindrome(7234321));
 
+
+
+// list = ['apple', 'banana', 'chery', 'watermelon']
+// for element in list[0:0]:
+    // print(element)
 
 
