@@ -20,14 +20,40 @@
 //   console.log(twoSum()); 
 
 
+
+
 // 2.Palindrome Number
 
-// let number = String(121)
-// let str_number = number.split('').reverse().join('')
-// let rev_number = parseInt(str_number)
+// Solution 1
 
-// if (number == rev_number) {
+// let initialNumber = 121
+
+// let convertedNumber = String(initialNumber)
+// let strNumber = convertedNumber.split('').reverse().join('')
+
+// if (convertedNumber === strNumber) {
 //     console.log(true)
 // } else {
 //     console.log(false)
 // }
+
+
+
+// Solution 2
+
+const initialNumber = 1234321;
+const convertedNumber = String(initialNumber);
+
+const length = convertedNumber.length;
+
+for (let i = 0; i < length; i++) {
+    if (convertedNumber[i] == convertedNumber[length - 1 - i]) {
+        console.log(true)
+    } else {
+        console.log(false);
+        break;
+    }
+};
+
+
+
