@@ -95,7 +95,7 @@ function findRepeatingNums(arrayNum) {
     
     return duplicates;
 }
-// TO DO
+// TO
 const array = [2, 1, 2, 1, 43, 3, 342, 242424, 342, 342];
 // 5
 
