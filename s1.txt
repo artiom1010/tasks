@@ -77,6 +77,7 @@ console.log(isConsecutive(testcases[1])); // Ответ: false
 console.log(isConsecutive(testcases[2])); // Ответ: false
 
 5. Напишите функцию findRepeatingNums, принимающую числовой массив в качестве аргумента, и которая будет возвращать массив чисел, повторяющихся в числовом массиве. 
+
 /////
 function findRepeatingNums(array) {
     for(let i = 0; i < array.length; i++) {
@@ -90,8 +91,9 @@ function findRepeatingNums(array) {
 
 findRepeatingNums([4, 2, 4, 5, 2, 3, 1])
 /////
+
 Тесткейс:
-const nums = [4, 2, 4, 5, 2, 3, 1];
+const nums = [4, 2, 4, 5, 2, 3, 1]; // [4, 2]
 …
 console.log(findRepeatingNums(nums)); // Выдаст [4, 2]
 

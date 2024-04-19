@@ -64,7 +64,7 @@
 
 // function isConsecutive(arrayNum) {
 //     arraySort = arrayNum.sort();
-//     for (let i = 0; i < arraySort.length - 1; i++) {
+//     for (let i = 0; i < arraySort.length - 1; i++) { // arraySort.length = 6, но последний индекс = 5, до какого момента i должен перебирать массив в условии
 //         if (arraySort[i] + 1 !== arraySort[i+1]) {
 //             return false;
 //         }
@@ -80,24 +80,25 @@
 
 // Напишите функцию findRepeatingNums, принимающую числовой массив в качестве аргумента, и которая будет возвращать массив чисел, повторяющихся в числовом массиве. 
 
-// function findRepeatingNums(arrayNum) {
-//     let duplicates = [];
+function findRepeatingNums(arrayNum) {
+    if (arrayNum.length === 0) {
+        return [];
+    }
 
-//     for (let i = 0; i < 10; i++) {
-        
-//         let delNum = arrayNum.pop();
-//         // console.log(delNum);
-//         if (arrayNum.includes(delNum) && !duplicates.includes(delNum)) {
-//             duplicates.push(delNum);
-//         }
-        
-//     }
-//     return duplicates;
-// }
+    let duplicates = [];
 
-// const array = [2, 1, 2, 1, 43, 3, 342, 242424, 342, 342];
+    for (let i = 0; i < arrayNum.length; i++) {
+        if (arrayNum.indexOf(arrayNum[i]) != arrayNum.lastIndexOf(arrayNum[i]) && !duplicates.includes(arrayNum[i])) {
+            duplicates.push(arrayNum[i]);
+        }
+    }
+    
+    return duplicates;
+}
 
-// console.log(findRepeatingNums(array));
+const array = [2, 1, 2, 1, 43, 3, 342, 242424, 342, 342];
+
+console.log(findRepeatingNums(array));
 
 
 
@@ -118,9 +119,10 @@
 //     }
     
 //     for (let i = 0; i < height; i++) {
-//         let row = '';
+//         let row = ''; // когда i растет из 0 в 1, как _ переходит на новую строку?
+
 //         for (let j = 0; j < height - i - 1; j++) {
-//             row = row + '_'; // когда i растет из 0 в 1, как _ переходит на новую строку?
+//             row += '_'; //что будет, еслм в условии j < 4, j = 4 или 5, может выскочить ошибка?
 //         }
         
 //         for (let k = height - i - 1; k < height; k++) {
@@ -166,7 +168,32 @@
 // **##
 // ***#
 
+// function triangle(height) {
+//     if (height === 0) {
+//         console.log('Error: height cannot be 0.');
+//         return;
+//     }
 
+//     for (let i = 0; i < height; i++) {
+//         let row = '';
+
+//         for (let z = 0; z < height - i - 1; z++) {
+//             row += '*';
+//         }
+
+//         for (let t = 0; t < i + 1; t++) {
+//             row += '#';
+//         }
+
+//         console.log(row);
+
+//     }
+        
+
+    
+// }
+
+// triangle(5);
 
 
 
@@ -244,13 +271,14 @@
 // console.log(family)
 
 ////// INDEXOF
-// const family = ['apple', 'cherry', 'banana', 'watermelon']
-// const message = "Hello, my name is artiom"
-// const getIndex = family.indexOf('cherry')
-// console.log(getIndex) // 1
-// const getIndexMessage = message.indexOf('artiom')
+const family = ['apple', 'cherry', 'banana', 'cherry', 'watermelon']
+
+const message = "Hello, my name is artiom"
+const getIndex = family.lastIndexOf('cherry')
+console.log(getIndex) // 1
+const getIndexMessage = message.indexOf('artiom')
 // console.log(getIndexMessage) // 18
-// console.log(family[1]) // cherry
+console.log(family[1]) // cherry
 
 ////// INCLUDES
 // const family = ['apple', 'cherry', 'banana', 'watermelon']
