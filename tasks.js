@@ -80,26 +80,25 @@
 
 // Напишите функцию findRepeatingNums, принимающую числовой массив в качестве аргумента, и которая будет возвращать массив чисел, повторяющихся в числовом массиве. 
 
-function findRepeatingNums(arrayNum) {
-    if (arrayNum.length === 0) {
-        return [];
-    }
+// function findRepeatingNums(arrayNum) {
+//     if (arrayNum.length === 0) {
+//         return [];
+//     }
 
-    let duplicates = [];
+//     let duplicates = [];
 
-    for (let i = 0; i < arrayNum.length; i++) {
-        if (arrayNum.indexOf(arrayNum[i]) != arrayNum.lastIndexOf(arrayNum[i]) && !duplicates.includes(arrayNum[i])) {
-            duplicates.push(arrayNum[i]);
-        }
-    }
+//     for (let i = 0; i < arrayNum.length; i++) {
+//         if (arrayNum.indexOf(arrayNum[i]) != arrayNum.lastIndexOf(arrayNum[i]) && !duplicates.includes(arrayNum[i])) {
+//             duplicates.push(arrayNum[i]);
+//         }
+//     }
     
-    return duplicates;
-}
-// TO DO
-const array = [2, 1, 2, 1, 43, 3, 342, 242424, 342, 342];
-// 5
+//     return duplicates;
+// }
 
-console.log(findRepeatingNums(array));
+// const array = [2, 1, 2, 1, 43, 3, 342, 242424, 342, 342];
+
+// console.log(findRepeatingNums(array));
 
 
 
@@ -169,34 +168,38 @@ console.log(findRepeatingNums(array));
 // **##
 // ***#
 
+
+
 // function triangle(height) {
 //     if (height === 0) {
 //         console.log('Error: height cannot be 0.');
 //         return;
 //     }
 
-//     for (let i = 0; i < height; i++) {
+//     for (let i = 1; i < height + 1; i++) {
 //         let row = '';
 
-//         for (let z = 0; z < height - i - 1; z++) {
+//         for (let z = 0; z < height - i; z++) {
 //             row += '*';
 //         }
 
-//         for (let t = 0; t < i + 1; t++) {
-//             row += '#';
+//         for (let t = 1; t < i + i; t++) {
+//             row += '0';
+            
 //         }
 
 //         console.log(row);
-
 //     }
-        
-
     
 // }
 
 // triangle(5);
 
-
+// ****0
+// ***000
+// **00000
+// *0000000
+// 000000000
 
 
 
@@ -272,14 +275,14 @@ console.log(findRepeatingNums(array));
 // console.log(family)
 
 ////// INDEXOF
-const family = ['apple', 'cherry', 'banana', 'cherry', 'watermelon']
+// const family = ['apple', 'cherry', 'banana', 'cherry', 'watermelon']
 
-const message = "Hello, my name is artiom"
-const getIndex = family.lastIndexOf('cherry')
-console.log(getIndex) // 1
-const getIndexMessage = message.indexOf('artiom')
-// console.log(getIndexMessage) // 18
-console.log(family[1]) // cherry
+// const message = "Hello, my name is artiom"
+// const getIndex = family.lastIndexOf('cherry')
+// console.log(getIndex) // 1
+// const getIndexMessage = message.indexOf('artiom')
+// // console.log(getIndexMessage) // 18
+// console.log(family[1]) // cherry
 
 ////// INCLUDES
 // const family = ['apple', 'cherry', 'banana', 'watermelon']
