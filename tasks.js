@@ -189,8 +189,8 @@
 //         }
 
 //         console.log(row);
+
 //     }
-    
 // }
 
 // triangle(5);
